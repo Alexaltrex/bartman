@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/bartman/static/css/main.9517ba6a.css",
+    "main.css": "/bartman/static/css/main.8a0724f9.css",
     "main.js": "/bartman/static/js/main.77fe5708.js",
     "static/js/787.0642ad7d.chunk.js": "/bartman/static/js/787.0642ad7d.chunk.js",
     "static/media/back.png": "/bartman/static/media/back.73dbcb451573d4f231a5.png",
@@ -11,12 +11,12 @@
     "static/media/2.png": "/bartman/static/media/2.627f6bc3286db009ba06.png",
     "static/media/logo.png": "/bartman/static/media/logo.594cd2c0908a41e7f31d.png",
     "index.html": "/bartman/index.html",
-    "main.9517ba6a.css.map": "/bartman/static/css/main.9517ba6a.css.map",
+    "main.8a0724f9.css.map": "/bartman/static/css/main.8a0724f9.css.map",
     "main.77fe5708.js.map": "/bartman/static/js/main.77fe5708.js.map",
     "787.0642ad7d.chunk.js.map": "/bartman/static/js/787.0642ad7d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.9517ba6a.css",
+    "static/css/main.8a0724f9.css",
     "static/js/main.77fe5708.js"
   ]
 }
