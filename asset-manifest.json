@@ -1,9 +1,13 @@
 {
   "files": {
-    "main.css": "/bartman/static/css/main.ccc1e194.css",
-    "main.js": "/bartman/static/js/main.c6da4f03.js",
+    "main.css": "/bartman/static/css/main.5e05c224.css",
+    "main.js": "/bartman/static/js/main.e138ffda.js",
+    "static/css/959.8c26675a.chunk.css": "/bartman/static/css/959.8c26675a.chunk.css",
+    "static/js/959.48dab11d.chunk.js": "/bartman/static/js/959.48dab11d.chunk.js",
     "static/js/787.0642ad7d.chunk.js": "/bartman/static/js/787.0642ad7d.chunk.js",
+    "static/js/118.da5e2278.chunk.js": "/bartman/static/js/118.da5e2278.chunk.js",
     "static/media/timer.gif": "/bartman/static/media/timer.8edcf4467a75c7390dad.gif",
+    "static/media/bartman.gif": "/bartman/static/media/bartman.f094133742ac73405296.gif",
     "static/media/card3.png": "/bartman/static/media/card3.ec7fc6556ff695f4598c.png",
     "static/media/logo.gif": "/bartman/static/media/logo.856a32ba868b86c5ad3b.gif",
     "static/media/ourGoal.png": "/bartman/static/media/ourGoal.2cb0c59f716271eda45e.png",
@@ -17,14 +21,17 @@
     "static/media/card1.png": "/bartman/static/media/card1.0c80cff8f95aca76eb7d.png",
     "static/media/bartman.png": "/bartman/static/media/bartman.a32943c163d71ad0735d.png",
     "static/media/2.png": "/bartman/static/media/2.627f6bc3286db009ba06.png",
-    "static/media/logo.png": "/bartman/static/media/logo.4fe63e24cbf0038e6909.png",
+    "static/media/stars.png": "/bartman/static/media/stars.ab8f201c377b54505898.png",
     "index.html": "/bartman/index.html",
-    "main.ccc1e194.css.map": "/bartman/static/css/main.ccc1e194.css.map",
-    "main.c6da4f03.js.map": "/bartman/static/js/main.c6da4f03.js.map",
-    "787.0642ad7d.chunk.js.map": "/bartman/static/js/787.0642ad7d.chunk.js.map"
+    "main.5e05c224.css.map": "/bartman/static/css/main.5e05c224.css.map",
+    "main.e138ffda.js.map": "/bartman/static/js/main.e138ffda.js.map",
+    "959.8c26675a.chunk.css.map": "/bartman/static/css/959.8c26675a.chunk.css.map",
+    "959.48dab11d.chunk.js.map": "/bartman/static/js/959.48dab11d.chunk.js.map",
+    "787.0642ad7d.chunk.js.map": "/bartman/static/js/787.0642ad7d.chunk.js.map",
+    "118.da5e2278.chunk.js.map": "/bartman/static/js/118.da5e2278.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ccc1e194.css",
-    "static/js/main.c6da4f03.js"
+    "static/css/main.5e05c224.css",
+    "static/js/main.e138ffda.js"
   ]
 }
