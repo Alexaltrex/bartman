@@ -1,0 +1,62 @@
+@import "../../assets/style/app";
+
+.ourPartners {
+  padding-top: 80px;
+
+  @include desktop {
+    padding-top: 130px;
+  }
+
+  .title {
+    @include H2;
+  }
+
+  .cardsMobile {
+    @include onlyMobile();
+    margin-top: 30px;
+
+    .slide {
+      width: 150px;
+      height: 92px;
+      position: relative;
+
+      .back {
+        display: block;
+        width: 150px;
+        height: 92px;
+      }
+
+      .logo {
+        @include absoluteCenter;
+        height: 60px;
+      }
+    }
+
+
+  }
+
+  .cardsDesktop {
+    @include onlyDesktop(flex);
+    margin-top: 50px;
+    justify-content: center;
+
+    .card {
+      position: relative;
+
+      &:not(:first-child) {
+        margin-left: 12px;
+      }
+
+      .back {
+        display: block;
+        width: 220px;
+        height: 135px;
+      }
+
+      .logo {
+        @include absoluteCenter;
+        height: 90px;
+      }
+    }
+  }
+}
