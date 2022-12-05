@@ -14,46 +14,46 @@ import {Navigation} from "../X_Custom/Navigation/Navigation";
 import {svgIcons} from "../../assets/svgIcons";
 
 const cards = [
-    // {
-    //     src: src0,
-    //     name: 'Dominic',
-    //     job: 'Developer',
-    //     text: 'He has worked in the blockchain industry for 10 years and is the most sincere and passionate person. Experience the NFTs he will show and the future of blockchain.',
-    //     twitter: "#",
-    //     instagram: '#',
-    //     facebook: '#',
-    //     telegram: '#'
-    // },
-    // {
-    //     src: src1,
-    //     name: 'Marta',
-    //     job: 'Designer',
-    //     text: 'He has worked in the blockchain industry for 10 years and is the most sincere and passionate person. Experience the NFTs he will show and the future of blockchain.',
-    //     twitter: "#",
-    //     instagram: '#',
-    //     facebook: '#',
-    //     telegram: '#'
-    // },
-    // {
-    //     src: src2,
-    //     name: 'Silvia',
-    //     job: 'Designer',
-    //     text: 'He has worked in the blockchain industry for 10 years and is the most sincere and passionate person. Experience the NFTs he will show and the future of blockchain.',
-    //     twitter: "#",
-    //     instagram: '#',
-    //     facebook: '#',
-    //     telegram: '#'
-    // },
-    // {
-    //     src: src3,
-    //     name: 'Jacob',
-    //     job: 'Designer',
-    //     text: 'He has worked in the blockchain industry for 10 years and is the most sincere and passionate person. Experience the NFTs he will show and the future of blockchain.',
-    //     twitter: "#",
-    //     linkedIn: '#',
-    //     facebook: '#',
-    //     telegram: '#'
-    // },
+    {
+        src: src0,
+        name: 'Dominic',
+        job: 'Developer',
+        text: 'He has worked in the blockchain industry for 10 years and is the most sincere and passionate person. Experience the NFTs he will show and the future of blockchain.',
+        twitter: "#",
+        instagram: '#',
+        facebook: '#',
+        telegram: '#'
+    },
+    {
+        src: src1,
+        name: 'Marta',
+        job: 'Designer',
+        text: 'He has worked in the blockchain industry for 10 years and is the most sincere and passionate person. Experience the NFTs he will show and the future of blockchain.',
+        twitter: "#",
+        instagram: '#',
+        facebook: '#',
+        telegram: '#'
+    },
+    {
+        src: src2,
+        name: 'Silvia',
+        job: 'Designer',
+        text: 'He has worked in the blockchain industry for 10 years and is the most sincere and passionate person. Experience the NFTs he will show and the future of blockchain.',
+        twitter: "#",
+        instagram: '#',
+        facebook: '#',
+        telegram: '#'
+    },
+    {
+        src: src3,
+        name: 'Jacob',
+        job: 'Designer',
+        text: 'He has worked in the blockchain industry for 10 years and is the most sincere and passionate person. Experience the NFTs he will show and the future of blockchain.',
+        twitter: "#",
+        linkedIn: '#',
+        facebook: '#',
+        telegram: '#'
+    },
     {
         src: src0,
         name: 'Crown฿AT',
@@ -117,6 +117,37 @@ const cards = [
     {
         src: src3,
         name: 'Matt',
+        job: 'Advisor',
+        text: 'He has worked in the blockchain industry for 10 years and is the most sincere and passionate person. Experience the NFTs he will show and the future of blockchain.',
+        twitter: "#",
+        linkedIn: '#',
+        facebook: '#',
+        telegram: 'https://t.me/mattlorion'
+    },
+
+    {
+        src: src3,
+        name: 'Nick',
+        job: 'Advisor',
+        text: 'He has worked in the blockchain industry for 10 years and is the most sincere and passionate person. Experience the NFTs he will show and the future of blockchain.',
+        twitter: "#",
+        linkedIn: '#',
+        facebook: '#',
+        telegram: 'https://t.me/mattlorion'
+    },
+    {
+        src: src3,
+        name: 'Demon',
+        job: 'Advisor',
+        text: 'He has worked in the blockchain industry for 10 years and is the most sincere and passionate person. Experience the NFTs he will show and the future of blockchain.',
+        twitter: "#",
+        linkedIn: '#',
+        facebook: '#',
+        telegram: 'https://t.me/mattlorion'
+    },
+    {
+        src: src3,
+        name: 'Add',
         job: 'Advisor',
         text: 'He has worked in the blockchain industry for 10 years and is the most sincere and passionate person. Experience the NFTs he will show and the future of blockchain.',
         twitter: "#",
