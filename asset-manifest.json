@@ -1,9 +1,9 @@
 {
   "files": {
-    "main.css": "/bartman/static/css/main.333d2313.css",
-    "main.js": "/bartman/static/js/main.7cdaaa89.js",
-    "static/css/828.3165f1fb.chunk.css": "/bartman/static/css/828.3165f1fb.chunk.css",
-    "static/js/828.a1b4d2c3.chunk.js": "/bartman/static/js/828.a1b4d2c3.chunk.js",
+    "main.css": "/bartman/static/css/main.623a8173.css",
+    "main.js": "/bartman/static/js/main.e906250e.js",
+    "static/css/89.1f7ef580.chunk.css": "/bartman/static/css/89.1f7ef580.chunk.css",
+    "static/js/89.db5dffca.chunk.js": "/bartman/static/js/89.db5dffca.chunk.js",
     "static/js/787.0642ad7d.chunk.js": "/bartman/static/js/787.0642ad7d.chunk.js",
     "static/js/118.da5e2278.chunk.js": "/bartman/static/js/118.da5e2278.chunk.js",
     "static/media/timer.gif": "/bartman/static/media/timer.92919b67d600f8254cd4.gif",
@@ -15,19 +15,29 @@
     "static/media/card2.png": "/bartman/static/media/card2.16301e4f2238620d6fb6.png",
     "static/media/card0.png": "/bartman/static/media/card0.0c80cff8f95aca76eb7d.png",
     "static/media/card1.png": "/bartman/static/media/card1.0c80cff8f95aca76eb7d.png",
+    "static/media/12.png": "/bartman/static/media/12.64e322346580e1e077e9.png",
+    "static/media/10.png": "/bartman/static/media/10.5ed854182200e2c687da.png",
+    "static/media/6.png": "/bartman/static/media/6.7ca25d94ac4f87e5b898.png",
+    "static/media/14.png": "/bartman/static/media/14.d99737b6c2ed7588b7bc.png",
     "static/media/bartman.png": "/bartman/static/media/bartman.a32943c163d71ad0735d.png",
+    "static/media/5.png": "/bartman/static/media/5.80762cf61c8a2f2f0c57.png",
+    "static/media/11.png": "/bartman/static/media/11.00a4504311b36f277287.png",
+    "static/media/7.png": "/bartman/static/media/7.e995a2fe29d37c126701.png",
+    "static/media/9.png": "/bartman/static/media/9.3a8f5597a90ed08b838f.png",
+    "static/media/13.png": "/bartman/static/media/13.ff4290c66132fec8feca.png",
     "static/media/2.png": "/bartman/static/media/2.627f6bc3286db009ba06.png",
     "static/media/stars.png": "/bartman/static/media/stars.ab8f201c377b54505898.png",
+    "static/media/8.png": "/bartman/static/media/8.a6a3ffec9de0fde5b559.png",
     "index.html": "/bartman/index.html",
-    "main.333d2313.css.map": "/bartman/static/css/main.333d2313.css.map",
-    "main.7cdaaa89.js.map": "/bartman/static/js/main.7cdaaa89.js.map",
-    "828.3165f1fb.chunk.css.map": "/bartman/static/css/828.3165f1fb.chunk.css.map",
-    "828.a1b4d2c3.chunk.js.map": "/bartman/static/js/828.a1b4d2c3.chunk.js.map",
+    "main.623a8173.css.map": "/bartman/static/css/main.623a8173.css.map",
+    "main.e906250e.js.map": "/bartman/static/js/main.e906250e.js.map",
+    "89.1f7ef580.chunk.css.map": "/bartman/static/css/89.1f7ef580.chunk.css.map",
+    "89.db5dffca.chunk.js.map": "/bartman/static/js/89.db5dffca.chunk.js.map",
     "787.0642ad7d.chunk.js.map": "/bartman/static/js/787.0642ad7d.chunk.js.map",
     "118.da5e2278.chunk.js.map": "/bartman/static/js/118.da5e2278.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.333d2313.css",
-    "static/js/main.7cdaaa89.js"
+    "static/css/main.623a8173.css",
+    "static/js/main.e906250e.js"
   ]
 }
