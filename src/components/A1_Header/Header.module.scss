@@ -45,6 +45,7 @@
         }
 
         .link {
+          white-space: nowrap;
           text-decoration: none;
           @include RetroLandMayhem;
           font-size: 16px;
@@ -80,7 +81,7 @@
 
       }
 
-      .account {
+      .accountBlock {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -90,7 +91,7 @@
           margin-left: 16px;
         }
 
-        .value {
+        .balance {
           @include Mayak;
           font-size: 16px;
           line-height: 130%;
@@ -100,8 +101,12 @@
           }
         }
 
-        .name {
+        .account {
           @include Mayak;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          max-width: 220px;
           font-size: 14px;
           line-height: 135%;
           letter-spacing: -0.02em;
@@ -111,6 +116,7 @@
             font-size: 16px;
             margin-top: 2px;
           }
+
         }
 
       }

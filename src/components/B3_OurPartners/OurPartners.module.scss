@@ -11,43 +11,32 @@
     @include H2;
   }
 
-  .cardsMobile {
-    @include onlyMobile();
+  .swiper {
     margin-top: 30px;
 
-    .slide {
+    @include desktop {
+      margin-top: 50px;
+    }
+
+    .card {
       width: 150px;
       height: 92px;
       position: relative;
 
-      .back {
+      @include desktop {
+        width: 220px;
+        height: 135px;
+      }
+
+      .backMobile {
+        @include onlyMobile();
         display: block;
         width: 150px;
         height: 92px;
       }
 
-      .logo {
-        @include absoluteCenter;
-        height: 60px;
-      }
-    }
-
-
-  }
-
-  .cardsDesktop {
-    @include onlyDesktop(flex);
-    margin-top: 50px;
-    justify-content: center;
-
-    .card {
-      position: relative;
-
-      &:not(:first-child) {
-        margin-left: 12px;
-      }
-
-      .back {
+      .backDesktop {
+        @include onlyDesktop();
         display: block;
         width: 220px;
         height: 135px;
@@ -55,8 +44,17 @@
 
       .logo {
         @include absoluteCenter;
-        height: 90px;
+        height: 60px;
+
+        @include desktop {
+          height: 90px;
+        }
       }
     }
+
+
+
   }
+
+
 }

@@ -19,6 +19,9 @@ import playMobileClick from "../../assets/png/buttons/home/mobile/click.png";
 import playDesktopDefault from "../../assets/png/buttons/home/desktop/default.png";
 import playDesktopHover from "../../assets/png/buttons/home/desktop/hover.png";
 import playDesktopClick from "../../assets/png/buttons/home/desktop/click.png";
+import {useEffect, useState} from "react";
+import detectEthereumProvider from "@metamask/detect-provider";
+import {ethers} from "ethers";
 
 export const links = [
     {to: '/#Home', label: 'Home'},
@@ -34,6 +37,83 @@ export const Header = observer(() => {
     const {setBurgerMenu} = useStore();
 
     const navigate = useNavigate();
+
+    const [provider, setProvider] = useState<any>(null);
+    const [currentAccountAddress, setCurrentAccountAddress] = useState<string | null>(null);
+    const [balance, setBalance] = useState<string | null>(null);
+    const [connecting, setConnecting] = useState(false);
+    const [detectingProvider, setDetectingProvider] = useState(false);
+
+    // 1 - определяем наличие провайдера
+    useEffect(() => {
+        const getProvider = async () => {
+            setDetectingProvider(true);
+            console.log("start detecting provider", new Date());
+            const provider = await detectEthereumProvider();
+            return provider
+        }
+        getProvider()
+            .then(result => {
+                console.log("end detecting provider", new Date());
+                setProvider(result)
+            })
+            .finally(() => setDetectingProvider(false))
+    }, []);
+
+    // 2 - при наличие провайдера устанавливаем обработчики событий "accountsChanged", "chainChanged"
+    useEffect(() => {
+        if (provider) {
+            provider.on('accountsChanged', (accounts: any) => accountChangeHandler(accounts[0]));
+            provider.on("chainChanged", chainChangedHandler);
+            return () => {
+                provider.removeListener('accountsChanged', (accounts: any) => accountChangeHandler(accounts[0]));
+                provider.removeListener("chainChanged", chainChangedHandler);
+            }
+        }
+    }, [provider]);
+
+    const accountChangeHandler = async (newAccount: string) => {
+        setCurrentAccountAddress(newAccount);
+        await getBalance(newAccount);
+    }
+
+    const chainChangedHandler = () => {
+        window.location.reload();
+    }
+
+    const onConnectHandler = async () => {
+        if (provider) {
+            if (Boolean(currentAccountAddress)) {
+                setCurrentAccountAddress("")
+            } else {
+                try {
+                    setConnecting(true);
+                    const accounts = await provider.request({method: 'eth_requestAccounts'});
+                    await accountChangeHandler(accounts[0]);
+                } catch (e: any) {
+                    console.log(e)
+                    alert(e.message)
+                } finally {
+                    setConnecting(false);
+                }
+            }
+        } else {
+            alert("Please install MetaMask")
+        }
+    }
+
+    const getBalance = async (newAccount: string) => {
+        try {
+            const balance = await provider.request({
+                method: 'eth_getBalance',
+                params: [newAccount, 'latest']
+            });
+            setBalance(ethers.utils.formatEther(balance))
+        } catch (e: any) {
+            alert(e.message)
+        }
+    }
+
 
     return (
         <header className={style.header}>
@@ -77,25 +157,40 @@ export const Header = observer(() => {
                 </div>
 
                 <div className={style.right}>
-                    <img src={arrow} alt="" className={style.arrow}/>
 
-                    <div className={style.account}>
-                        <p className={style.value}>125.23</p>
-                        <p className={style.name}>$BartMAN</p>
-                    </div>
 
-                    <ButtonCustom widthMobile={68}
-                                  heightMobile={42}
-                                  widthDesktop={96}
-                                  heightDesktop={60}
-                                  imgMobileDefault={imgMobileDefault}
-                                  imgMobileClick={imgMobileClick}
-                                  imgDesktopDefault={imgDesktopDefault}
-                                  imgDesktopHover={imgDesktopHover}
-                                  imgDesktopClick={imgDesktopClick}
-                                  className={style.wallet}
-                    >
-                    </ButtonCustom>
+                    {
+                        currentAccountAddress && balance && (
+                            <>
+                                <img src={arrow} alt="" className={style.arrow}/>
+                                <div className={style.accountBlock}>
+                                    <p className={style.balance}>
+                                        {`${Number(balance).toFixed(6)} ETH`}
+                                    </p>
+                                    <div className={style.account}>
+                                        {currentAccountAddress}
+                                    </div>
+                                </div>
+                            </>
+                        )
+                    }
+
+                    {
+                        !currentAccountAddress &&
+                        <ButtonCustom widthMobile={68}
+                                      heightMobile={42}
+                                      widthDesktop={96}
+                                      heightDesktop={60}
+                                      imgMobileDefault={imgMobileDefault}
+                                      imgMobileClick={imgMobileClick}
+                                      imgDesktopDefault={imgDesktopDefault}
+                                      imgDesktopHover={imgDesktopHover}
+                                      imgDesktopClick={imgDesktopClick}
+                                      className={style.wallet}
+                                      onClick={() => onConnectHandler()}
+                        >
+                        </ButtonCustom>
+                    }
 
                     <ButtonCustom widthMobile={112}
                                   heightMobile={88}

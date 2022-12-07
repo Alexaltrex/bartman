@@ -5,50 +5,58 @@ import src1 from "../../assets/png/B3_OurPartners/1.png";
 import src2 from "../../assets/png/B3_OurPartners/2.png";
 import src3 from "../../assets/png/B3_OurPartners/3.png";
 import src4 from "../../assets/png/B3_OurPartners/4.png";
+import src5 from "../../assets/png/B3_OurPartners/5.png";
+import src6 from "../../assets/png/B3_OurPartners/6.png";
+import src7 from "../../assets/png/B3_OurPartners/7.png";
+import src8 from "../../assets/png/B3_OurPartners/8.png";
+import src9 from "../../assets/png/B3_OurPartners/9.png";
+import src10 from "../../assets/png/B3_OurPartners/10.png";
+import src11 from "../../assets/png/B3_OurPartners/11.png";
+import src12 from "../../assets/png/B3_OurPartners/12.png";
+import src13 from "../../assets/png/B3_OurPartners/13.png";
+import src14 from "../../assets/png/B3_OurPartners/14.png";
+
 import backMobile from "../../assets/png/B3_OurPartners/card_mobile.png";
 import backDesktop from "../../assets/png/B3_OurPartners/card_desktop.png";
-import { Swiper, SwiperSlide } from 'swiper/react';
+import {Swiper, SwiperSlide} from 'swiper/react';
 import 'swiper/css';
-import { Autoplay, Pagination, Navigation } from "swiper";
+import {Autoplay} from "swiper";
 
-const cards = [src0, src1, src2, src3, src4];
+
+const cards = [src0, src1, src2, src3, src4, src5, src6, src7, src8, src9, src10, src11, src12, src13, src14];
 
 export const OurPartners = () => {
     return (
         <div className={style.ourPartners} id="Partners">
             <h2 className={style.title}>Our partners</h2>
 
-            <Swiper className={style.cardsMobile}
+            <Swiper className={style.swiper}
                     slidesPerView="auto"
                     spaceBetween={10}
                     centeredSlides={true}
                     loop={true}
                     autoplay={{delay: 1500}}
                     modules={[Autoplay]}
+                    breakpoints={{
+                        320: {
+                            centeredSlides: true
+                        },
+                        1440: {
+                            centeredSlides: false
+                        }
+                    }}
             >
 
                 {
                     cards.map((src, key) => (
-                        <SwiperSlide className={style.slide} key={key}>
-                            <img src={backMobile} alt="" className={style.back}/>
+                        <SwiperSlide className={style.card} key={key}>
+                            <img src={backMobile} alt="" className={style.backMobile}/>
+                            <img src={backDesktop} alt="" className={style.backDesktop}/>
                             <img src={src} alt="" className={style.logo}/>
                         </SwiperSlide>
                     ))
                 }
             </Swiper>
-
-            <div className={style.cardsDesktop}>
-                {
-                    cards.map((src, key) => (
-                        <div key={key}
-                             className={style.card}
-                        >
-                            <img src={backDesktop} alt="" className={style.back}/>
-                            <img src={src} alt="" className={style.logo}/>
-                        </div>
-                    ))
-                }
-            </div>
         </div>
     )
 }
